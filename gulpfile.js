@@ -3,16 +3,16 @@ var uglify = require('gulp-uglify');
 var uglifycss = require('gulp-uglifycss');
 
 gulp.task('uglify-js', function() {
-  return gulp.src('views/js/*.js')
+  return gulp.src('development/views/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('views/dist/js'));
+    .pipe(gulp.dest('production/views/js'));
 });
 
 gulp.task('uglify-css', function () {
-  gulp.src('views/css/*.css')
+  gulp.src('development/views/css/*.css')
     .pipe(uglifycss())
-    .pipe(gulp.dest('views/dist/css'));
+    .pipe(gulp.dest('production/views/css'));
 });
 
-gulp.task('uglify', ['compress', 'css'], function () {
+gulp.task('uglify', ['uglify-js', 'uglify-css'], function () {
 });

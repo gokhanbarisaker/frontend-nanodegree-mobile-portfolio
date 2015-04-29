@@ -9,7 +9,7 @@ gulp.task('uglify-js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('production/views/js'));
 
-  var root = gulp.src('developement/js/*.js')
+  var root = gulp.src('development/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('production/js'));
 

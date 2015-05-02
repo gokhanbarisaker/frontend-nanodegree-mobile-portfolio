@@ -514,7 +514,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  // Moved the non-mover dependent calculations to outside of loop
+  // Moved the non-mover element dependent calculations to outside of loop
   // to prevent repeating calculations with same result.
   var scrollTop = document.body.scrollTop;
   var theThing = (scrollTop / 1250);
